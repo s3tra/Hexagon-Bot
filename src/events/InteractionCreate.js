@@ -236,11 +236,11 @@ export default class InteractionCreate extends BaseEvent {
 
       async function getBadges(embed) {
         const badgeEmojis = {
-          ['Developers']: '<:DeveloperIcon:1224008088437260298>',
-          ['Partners']: '<:PartnerIcon:1224008089607606322>',
+          ['Developers']: '<:DeveloperIcon:1270832145790664747>',
+          ['Partners']: '<:PartnerIcon:1270832147640352890>',
           ['Booster']: '<:Booster:1148988691495264388>',
-          ['Bugs']: '<:BugIcon:1224008087359197304>',
-          ['Premium']: '<:PremiumIcon:1224008091385729115>',
+          ['Bugs']: '<:BugIcon:1270832144939487242>',
+          ['Premium']: '<:PremiumIcon:1270832143810957342>',
         };
         const guild = await client.guilds.cache.get('1078263416667512862');
 
@@ -334,7 +334,7 @@ export default class InteractionCreate extends BaseEvent {
         const embed = new EmbedBuilder()
           .setTitle('Profile Embed')
           .setFields([
-            {name: 'Tickets Handled', value: '`' + String(guildTicketProfileVal.ticketsHandled) + '`', inline: true},
+            {name: 'Tickets Handled', value: '`' + String(guildTicketProfileVal.ticketsHandled).toLocaleString() + '`', inline: true},
             {name: 'Ticket Rating', value: ratingValue, inline: true}
           ])
           .setThumbnail(interaction.member.user.displayAvatarURL())
