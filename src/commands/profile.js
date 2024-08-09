@@ -22,7 +22,7 @@ export default class Profile extends BaseCommand {
       const embed = new EmbedBuilder()
         .setTitle('Profile Embed')
         .setFields([
-          { name: 'Total Commands Ran', value: '`' + userData.commandsRan + '`', inline: true },
+          { name: 'Total Commands Ran', value: '`' + String(userData.commandsRan).toLocaleString() + '`', inline: true },
           { name: 'Joined Discord', value: '`' + moment(interaction.member.user.createdAt).format('MM/DD/YYYY') + '`', inline: true },
           { name: 'Joined Server', value: '`' + moment(interaction.member.joinedAt).format('MM/DD/YYYY') + '`', inline: true }
         ])
@@ -31,11 +31,11 @@ export default class Profile extends BaseCommand {
         .setTimestamp();
 
       const badgeEmojis = {
-        ['Developers']: '<:DeveloperIcon:1224008088437260298>',
-        ['Partners']: '<:PartnerIcon:1224008089607606322>',
+        ['Developers']: '<:DeveloperIcon:1270832145790664747>',
+        ['Partners']: '<:PartnerIcon:1270832147640352890>',
         ['Booster']: '<:Booster:1148988691495264388>',
-        ['Bugs']: '<:BugIcon:1224008087359197304>',
-        ['Premium']: '<:PremiumIcon:1224008091385729115>',
+        ['Bugs']: '<:BugIcon:1270832144939487242>',
+        ['Premium']: '<:PremiumIcon:1270832143810957342>',
       };
       const guild = await client.guilds.cache.get('1078263416667512862');
 
