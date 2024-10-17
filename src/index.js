@@ -215,8 +215,9 @@ client.on('ready', async () => {
 
   const intervalInMinutes = 15;
   
-  await updateBotData();
-  setInterval(updateBotData, intervalInMinutes * 60 * 1000);
+  // Disabled because it just throws 401 every time, no use fixing this, we don't actively promote any bot site
+  // await updateBotData();
+  // setInterval(updateBotData, intervalInMinutes * 60 * 1000);
   
   await awardPremiumRole();
   setInterval(awardPremiumRole, intervalInMinutes * 60 * 1000);
